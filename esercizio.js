@@ -3,31 +3,66 @@
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum (a, b) {
+    return a === b ? (a + b) * 3 : a + b;
+}
+
+console.log(crazySum(3, 2))
+
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary (number) {
+    return number > 20 && number <= 100 || number === 400;
+};
+
+console.log(boundary(50))
+
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString (string) {
+    return string.split("").reverse().join("");
+};
+
+console.log(reverseString("EPICODE"))
+
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst (string) {
+    array = string.split(" ")
+
+    for (i = 0; i < array.length; i ++) {
+        array[i] = array[i][0].toUpperCase() + array[i].slice(1) 
+    };
+
+    return array.join(" ");
+};
+
+console.log(upperFirst("così dovrebbe funzionare"))
+
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom (n) {
+    let numbers = [];
+    for (i = 1; i <= n; i++) {
+        numbers.push(parseInt(Math.random() * 10))
+    };
+    return numbers;
+};
+
+console.log(giveMeRandom(12))
+
 
 //EXTRA:
 /* ESERCIZIO 1
