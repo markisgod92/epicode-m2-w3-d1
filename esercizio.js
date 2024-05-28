@@ -69,21 +69,46 @@ console.log(giveMeRandom(12))
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function area (l1, l2) {
+    return (l1 * l2) / 2
+}
+
+console.log(area(12, 8))
+
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff (a) {
+    let result = Math.abs(a - 19);
+
+    return result > 19 ? result * 3 : result;
+}
+
+console.log(crazyDiff(39))
+
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify (string) {
+    let array = string.split(" ");
+    console.log(array)
+
+    if (array[0] === "code") {
+        return string;
+    } else {
+        array.splice(0, 0, "code");
+        return array.join(" ");
+    };
+}
+
+console.log(codify("non era nè basso nè alto, era Balto"))
+
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -91,10 +116,19 @@ console.log(giveMeRandom(12))
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7 (x) {
+    return x % 3 === 0 || x % 7 === 0;
+}
+
+console.log(check3and7(9))
+
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(string) {
+    return string.slice(1, string.length - 1);
+}
+
+console.log(cutString("anaconda"))
