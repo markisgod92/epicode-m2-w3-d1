@@ -18,7 +18,7 @@ function boundary (number) {
     return number > 20 && number <= 100 || number === 400;
 };
 
-console.log(boundary(50))
+console.log(boundary(23))
 
 
 /* ESERCIZIO 3
@@ -56,7 +56,7 @@ console.log(upperFirst("così dovrebbe funzionare"))
 function giveMeRandom (n) {
     let numbers = [];
     for (i = 1; i <= n; i++) {
-        numbers.push(parseInt(Math.random() * 10))
+        numbers.push(Math.floor(Math.random() * 11))
     };
     return numbers;
 };
@@ -70,7 +70,7 @@ console.log(giveMeRandom(12))
 */
 
 function area (l1, l2) {
-    return (l1 * l2) / 2
+    return l1 * l2
 }
 
 console.log(area(12, 8))
@@ -117,10 +117,14 @@ console.log(codify("non era nè basso nè alto, era Balto"))
 */
 
 function check3and7 (x) {
-    return x % 3 === 0 || x % 7 === 0;
+    if (x > 0 && Number.isInteger(x)) {
+        return x % 3 === 0 || x % 7 === 0;
+    } else {
+        return "Il numero non è un intero positivo."
+    }
 }
 
-console.log(check3and7(9))
+console.log(check3and7(-9))
 
 
 /* ESERCIZIO 5
